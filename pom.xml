@@ -13,7 +13,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <docker.image.prefix>akajimoru</docker.image.prefix>
+        <docker.image.prefix>artifactory.six-group.net/meon-cd-dev</docker.image.prefix>
     </properties>
 
     <groupId>ch.andreas.thesis</groupId>

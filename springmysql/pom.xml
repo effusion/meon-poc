@@ -63,28 +63,6 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>de.juplo</groupId>
-                <artifactId>hibernate-maven-plugin</artifactId>
-                <version>2.0.0</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>drop</goal>
-                            <goal>create</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <driver>com.mysql.jdbc.Driver</driver>
-                    <dialect>org.hibernate.dialect.MySQL57InnoDBDialect</dialect>
-                    <url>${database.url}</url>
-                    <username>${database.user}</username>
-                    <password>${database.password}</password>
-                    <!-- Place the generate schema directly in the bluepoodle test project. -->
-                    <outputFile>${project.basedir}/target/sql/schema-mysql.sql</outputFile>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
 </project>
