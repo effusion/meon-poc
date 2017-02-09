@@ -8,7 +8,7 @@ FROM artifactory.six-group.net/rhel7:latest
 MAINTAINER Andreas Heubeck <andreas.heubeck@six-group.com>
 
 # Install the basic requirements
-RUN yum -y install epel-release && yum -y update && yum -y install pwgen wget logrotate && yum -y install nss_wrapper gettext && yum clean all
+RUN yum -y install yum -y update && yum -y install pwgen wget logrotate && yum -y install nss_wrapper gettext && yum clean all
 
 # Setup rabbitmq-server
 RUN useradd -d /var/lib/rabbitmq -u 1001 -o -g 0 rabbitmq && \
