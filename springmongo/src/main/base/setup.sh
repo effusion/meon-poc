@@ -9,3 +9,5 @@ docker push artifactory.six-group.net/meon-cd-dev/spring-mongo:latest
 docker push artifactory.six-group.net/meon-cd-dev/springconfigserver:latest
 
 oc import-image meon-cd-dev/springconfigserver  --from=artifactory.six-group.net/meon-cd-dev/springconfigserver:latest --confirm
+
+oc new-app ssh://git@stash.six-group.net:22/~txh9o/prototyps.git --context-dir=docker/src/main/docker/rabbitmq  --name=rhel-meon-rabbitmq --strategy=docker

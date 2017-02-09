@@ -11,7 +11,7 @@ export NSS_WRAPPER_GROUP=/etc/group
 
 if [ ! -f /var/lib/rabbitmq/run-rabbitmq-server-firstrun ]; then
 	RABBITMQ_USER="${RABBITMQ_USER:-admin}"
-	RABBITMQ_PASS="${RABBITMQ_PASS:-`pwgen -s 12 1`}"
+	RABBITMQ_PASS="${RABBITMQ_PASS:-password}"
 	cat >/etc/rabbitmq/rabbitmq.config <<EOF
 [
 	{rabbit, [{default_user, <<"$RABBITMQ_USER">>}, {default_pass, <<"$RABBITMQ_PASS">>}]}
