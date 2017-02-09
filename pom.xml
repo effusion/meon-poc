@@ -25,6 +25,8 @@
         <module>springmongo</module>
         <module>springconfig</module>
         <module>graphql</module>
+        <module>docker</module>
+        <module>docker</module>
     </modules>
 
     <dependencies>

@@ -17,23 +17,48 @@
             <artifactId>spring-cloud-config-server</artifactId>
             <version>1.2.2.RELEASE</version>
         </dependency>
-        <dependency>
+        <!-- dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bus-amqp</artifactId>
             <version>1.2.1.RELEASE</version>
-        </dependency>
+        </dependency >
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-monitor</artifactId>
-            <version>1.2.2.RELEASE</version>
-        </dependency>
+            <version>1.2.2.RELEASE</version >
+        </dependency -->
     </dependencies>
 
     <build>
         <plugins>
             <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.4.13</version>
+                <configuration>
+                    <dockerHost>https://192.168.99.100:2376</dockerHost>
+                    <imageName>${docker.image.prefix}/${project.artifactId}:latest</imageName>
+                    <dockerCertPath>C:\Users\txh9o\.docker\machine\machines\default</dockerCertPath>
+                    <dockerDirectory>src/main/docker</dockerDirectory>
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

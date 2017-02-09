@@ -5,6 +5,7 @@ EXPOSE 8080
 ENV JAVA_OPTS=""
 ENV DB_HOST mongodb
 ENV DB_NAME meon
+ENV CONFIG_SERVER springconfigserver
 
 USER root
 
