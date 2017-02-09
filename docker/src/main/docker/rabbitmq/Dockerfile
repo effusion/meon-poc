@@ -5,7 +5,7 @@
 #   mohammedzee1000 <mohammed.zee1000@gmail.com>
 
 FROM artifactory.six-group.net/rhel7:latest
-MAINTAINER The CentOS Project <cloud-ops@centos.org>
+MAINTAINER Andreas Heubeck <andreas.heubeck@six-group.com>
 
 # Install the basic requirements
 RUN yum -y install epel-release && yum -y update && yum -y install pwgen wget logrotate && yum -y install nss_wrapper gettext && yum clean all
