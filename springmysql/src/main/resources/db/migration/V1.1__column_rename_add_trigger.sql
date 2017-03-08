@@ -1,1 +1,0 @@
-alter table t_person add COLUMN sur_name varchar(255);

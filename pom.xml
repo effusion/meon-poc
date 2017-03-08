@@ -21,11 +21,8 @@
     <packaging>pom</packaging>
     <version>1.1-SNAPSHOT</version>
     <modules>
-        <module>springmysql</module>
         <module>springmongo</module>
         <module>springconfig</module>
-        <module>graphql</module>
-        <module>docker</module>
         <module>docker</module>
     </modules>
 

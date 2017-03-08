@@ -16,4 +16,10 @@ class MessageRestController {
     String getMessage() {
         return this.message;
     }
+
+    @RequestMapping("/otherMessages")
+    String getOtherMessage() {
+        return "hello";
+    }
+
 }

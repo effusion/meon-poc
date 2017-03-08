@@ -3,6 +3,7 @@ FROM artifactory.six-group.net/meon-cd-dev/rhel-meon-java8:latest
 EXPOSE 8888
 
 ENV JAVA_OPTS=""
+ENV SPRING_RABBITMQ_HOST rabbitmq
 
 USER root
 
