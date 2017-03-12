@@ -17,7 +17,7 @@
     </properties>
 
     <groupId>ch.andreas.thesis</groupId>
-    <artifactId>prototyps-parent</artifactId>
+    <artifactId>final-prototyp</artifactId>
     <packaging>pom</packaging>
     <version>1.1-SNAPSHOT</version>
     <modules>
